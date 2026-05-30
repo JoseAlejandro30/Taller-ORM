@@ -1,0 +1,28 @@
+{
+  "name": "biblioteca-digital",
+  "version": "1.0.0",
+  "description": "Sistema de Biblioteca Digital - Ejercicio Final ORM",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "migrate": "npx sequelize-cli db:migrate",
+    "migrate:undo": "npx sequelize-cli db:migrate:undo:all",
+    "seed": "npx sequelize-cli db:seed:all",
+    "seed:undo": "npx sequelize-cli db:seed:undo:all",
+    "db:reset": "npm run migrate:undo && npm run migrate && npm run seed",
+    "demo": "node src/demo.js"
+  },
+  "dependencies": {
+    "@sequelize/sqlite3": "^7.0.0-alpha.48",
+    "reflect-metadata": "^0.2.2",
+    "sequelize": "^6.37.8",
+    "sql.js": "^1.14.1"
+  },
+  "devDependencies": {
+    "node-pre-gyp": "^0.17.0",
+    "sequelize-cli": "^6.6.5"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
